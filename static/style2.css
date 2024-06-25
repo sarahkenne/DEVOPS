@@ -1,0 +1,59 @@
+/* styles2.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.button {
+    display: block;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.user-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-item {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-actions {
+    float: right;
+}
+
+.edit-link, .delete-link {
+    margin-left: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.edit-link:hover, .delete-link:hover {
+    text-decoration: underline;
+}

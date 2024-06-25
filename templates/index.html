@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LISTE DES UTILISATEURS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+    <h1>LISTE DES UTILISATEURS</h1>
+    <a href="{{ url_for('create_user') }}" class="button">Create User</a>
+    <ul class="user-list">
+        {% for user in users %}
+        <li class="user-item">
+            <span class="user-name">
+                <a href="{{ url_for('user_detail', id=user.id) }}">{{ user.name }} {{ user.surname }}</a>
+            </span>
+            <span class="user-actions">
+                <a href="{{ url_for('update_user', id=user.id) }}" class="edit-link">Edit</a>
+                
+                <form method="POST" action="{{ url_for('delete_user', id=user.id) }}" style="display: inline-block;">
+                    <button type="submit" class="delete-link" onclick="return confirm('Are you sure?');">Delete</button>
+                </form>
+            </span>
+        </li>
+        
+        {% endfor %}
+    </ul>
+</body>
+</html>
